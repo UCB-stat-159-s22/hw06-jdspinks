@@ -1,11 +1,14 @@
+import matplotlib as mlb
+mlb.use('Agg')
 import numpy as np
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
 
 
+
 # function to whiten data
 def whiten(strain, interp_psd, dt):
-    global np  
+    #global np  
     Nt = len(strain)
     freqs = np.fft.rfftfreq(Nt, dt)
     freqs1 = np.linspace(0,2048.,Nt/2+1)
@@ -20,7 +23,7 @@ def whiten(strain, interp_psd, dt):
 
 # function to keep the data within integer limits, and write to wavfile:
 def write_wavfile(filename,fs,data):
-    global wavfile
+    #global wavfile
     d = np.int16(data/np.max(np.abs(data)) * 32767 * 0.9)
     wavfile.write(filename,int(fs), d)
     
