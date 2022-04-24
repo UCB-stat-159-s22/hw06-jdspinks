@@ -2,13 +2,13 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-parts:
-- caption: BINARY BLACK HOLE SIGNALS IN LIGO OPEN DATA
-  chapters:
-  - file: index.ipynb
+root: index.ipynb
+#parts:
+#- caption: BINARY BLACK HOLE SIGNALS IN LIGO OPEN DATA
+#  chapters:
+#  - file: index.ipynb
 #- file: markdown
 #- file: notebooks
-- caption: Binder
-  chapters:
-  - file: README.md
+#- caption: Binder
+#  chapters:
+#  - file: README.md
