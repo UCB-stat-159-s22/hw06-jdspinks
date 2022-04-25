@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BINARY BLACK HOLE SIGNALS IN LIGO OPEN DATA &#8212; My sample book</title>
+    <title>BINARY BLACK HOLE SIGNALS IN LIGO OPEN DATA &#8212; My Ligo book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,7 +80,7 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">My Ligo book</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -94,6 +95,19 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  BINARY BLACK HOLE SIGNALS IN LIGO OPEN DATA
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   BINARY BLACK HOLE SIGNALS IN LIGO OPEN DATA
+  </a>
+ </li>
+</ul>
+
     </div>
 </nav> <!-- To handle the deprecated key -->
 
@@ -588,7 +602,7 @@
 <h2>Set the event name to choose event and the plot type<a class="headerlink" href="#set-the-event-name-to-choose-event-and-the-plot-type" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1">#-- SET ME   Tutorial should work with most binary black hole events</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#-- SET ME   Tutorial should work with most binary black hole events</span>
 <span class="c1">#-- Default is no event selection; you MUST select one to proceed.</span>
 <span class="n">eventname</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="n">eventname</span> <span class="o">=</span> <span class="s1">&#39;GW150914&#39;</span> 
@@ -606,7 +620,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard python numerical analysis imports:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Standard python numerical analysis imports:</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">signal</span>
 <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
@@ -629,16 +643,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-2-c10b90fd1270&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">           </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">h5py</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">json</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">ligotools.utils</span> <span class="kn">import</span> <span class="n">whiten</span><span class="p">,</span> <span class="n">write_wavfile</span><span class="p">,</span> <span class="n">reqshift</span><span class="p">,</span> <span class="n">plot_NSD</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># the IPython magic below must be commented out in the .py file, since it doesn&#39;t work there.</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
 
-<span class="ne">ImportError</span>: No module named ligotools.utils
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;ligotools&#39;
 </pre></div>
 </div>
 </div>
@@ -647,7 +661,7 @@
 <h3>Read the event properties from a local json file (download in advance):<a class="headerlink" href="#read-the-event-properties-from-a-local-json-file-download-in-advance" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the event properties from a local json file</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the event properties from a local json file</span>
 <span class="n">fnjson</span> <span class="o">=</span> <span class="s2">&quot;data/BBH_events_v3.json&quot;</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">events</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">fnjson</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">))</span>
@@ -669,7 +683,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract the parameters for the desired event:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract the parameters for the desired event:</span>
 <span class="n">event</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">eventname</span><span class="p">]</span>
 <span class="n">fn_H1</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;fn_H1&#39;</span><span class="p">]</span>              <span class="c1"># File name for H1 data</span>
 <span class="n">fn_L1</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;fn_L1&#39;</span><span class="p">]</span>              <span class="c1"># File name for L1 data</span>
@@ -690,7 +704,7 @@
 <p>We will make use of the data, and waveform template, defined above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------------------------------------------------------</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------------------------------------------------------</span>
 <span class="c1"># Load LIGO data from a single file.</span>
 <span class="c1"># FIRST, define the filenames fn_H1 and fn_L1, above.</span>
 <span class="c1">#----------------------------------------------------------------</span>
@@ -719,7 +733,7 @@
 <h2>First look at the data from H1 and L1<a class="headerlink" href="#first-look-at-the-data-from-h1-and-l1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># both H1 and L1 will have the same time vector, so:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># both H1 and L1 will have the same time vector, so:</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">time_H1</span>
 <span class="c1"># the time sample interval (uniformly sampled!)</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -745,7 +759,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot +- deltat seconds around the event:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot +- deltat seconds around the event:</span>
 <span class="c1"># index into the strain time series for this time interval:</span>
 <span class="n">deltat</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">indxt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="n">tevent</span><span class="o">-</span><span class="n">deltat</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time</span> <span class="o">&lt;</span> <span class="n">tevent</span><span class="o">+</span><span class="n">deltat</span><span class="p">))</span>
@@ -779,7 +793,7 @@ integrate (sum) the squares of the ASD over that band, then take the square-root
 For the moment, let’s ignore that, and assume it’s all noise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">make_psds</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">make_psds</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">make_psds</span><span class="p">:</span>
     <span class="c1"># number of sample for the fast fourier transform:</span>
     <span class="n">NFFT</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">fs</span>
@@ -833,7 +847,7 @@ FINDCHIRP: An algorithm for detection of gravitational waves from inspiraling co
 B. Allen et al., PHYSICAL REVIEW D 85, 122006 (2012) ; <a class="reference external" href="http://arxiv.org/abs/gr-qc/0509116">http://arxiv.org/abs/gr-qc/0509116</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">BNS_range</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BNS_range</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">BNS_range</span><span class="p">:</span>
     <span class="c1">#-- compute the binary neutron star (BNS) detectability range</span>
 
@@ -918,7 +932,7 @@ Whitening requires no prior knowledge of spectral lines, etc; only the data are 
 <p>We will plot the whitened strain data, along with the signal template, after the matched filtering section, below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">whiten_data</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">whiten_data</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">whiten_data</span><span class="p">:</span>
     <span class="c1"># now whiten the data from H1 and L1, and the template (use H1 PSD):</span>
     <span class="n">strain_H1_whiten</span> <span class="o">=</span> <span class="n">whiten</span><span class="p">(</span><span class="n">strain_H1</span><span class="p">,</span><span class="n">psd_H1</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
@@ -939,7 +953,7 @@ Whitening requires no prior knowledge of spectral lines, etc; only the data are 
 <p>Now let’s plot a short time-frequency spectrogram around our event:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">make_plots</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">make_plots</span><span class="p">:</span>
     <span class="c1"># index into the strain time series for this time interval:</span>
     <span class="n">indxt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">time</span> <span class="o">&gt;=</span> <span class="n">tevent</span><span class="o">-</span><span class="n">deltat</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time</span> <span class="o">&lt;</span> <span class="n">tevent</span><span class="o">+</span><span class="n">deltat</span><span class="p">))</span>
 
@@ -986,7 +1000,7 @@ Whitening requires no prior knowledge of spectral lines, etc; only the data are 
 <p>Now let’s zoom in on where we think the signal is, using the whitened data, in the hope of seeing a chirp:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">make_plots</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">make_plots</span><span class="p">:</span>
     <span class="c1">#  plot the whitened data, zooming in on the signal region:</span>
 
     <span class="c1"># pick a shorter FTT time interval, like 1/16 of a second:</span>
@@ -1031,7 +1045,7 @@ Whitening requires no prior knowledge of spectral lines, etc; only the data are 
 <p>As noted above, the results won’t be identical to what is in the LIGO-Virgo papers, since we’re skipping many subtleties, such as combining many consistent templates.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read in the template (plus and cross) and parameters for the theoretical waveform</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read in the template (plus and cross) and parameters for the theoretical waveform</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">f_template</span> <span class="o">=</span> <span class="n">h5py</span><span class="o">.</span><span class="n">File</span><span class="p">(</span><span class="s2">&quot;data/&quot;</span><span class="o">+</span><span class="n">fn_template</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
@@ -1045,7 +1059,7 @@ Whitening requires no prior knowledge of spectral lines, etc; only the data are 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract metadata from the template file:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># extract metadata from the template file:</span>
 <span class="n">template_p</span><span class="p">,</span> <span class="n">template_c</span> <span class="o">=</span> <span class="n">f_template</span><span class="p">[</span><span class="s2">&quot;template&quot;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span>
 <span class="n">t_m1</span> <span class="o">=</span> <span class="n">f_template</span><span class="p">[</span><span class="s2">&quot;/meta&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;m1&#39;</span><span class="p">]</span>
 <span class="n">t_m2</span> <span class="o">=</span> <span class="n">f_template</span><span class="p">[</span><span class="s2">&quot;/meta&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;m2&#39;</span><span class="p">]</span>
@@ -1168,7 +1182,7 @@ GW150914: First results from the search for binary black hole coalescence with A
 The LIGO Scientific Collaboration, the Virgo Collaboration, <a class="reference external" href="http://arxiv.org/abs/1602.03839">http://arxiv.org/abs/1602.03839</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- To calculate the PSD of the data, choose an overlap and a window (common to all detectors)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- To calculate the PSD of the data, choose an overlap and a window (common to all detectors)</span>
 <span class="c1">#   that minimizes &quot;spectral leakage&quot; https://en.wikipedia.org/wiki/Spectral_leakage</span>
 <span class="n">NFFT</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">fs</span>
 <span class="n">psd_window</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">blackman</span><span class="p">(</span><span class="n">NFFT</span><span class="p">)</span>
@@ -1300,7 +1314,7 @@ The LIGO Scientific Collaboration, the Virgo Collaboration, <a class="reference 
 <p>Make wav (sound) files from the filtered, downsampled data, +-2s around the event.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make wav (sound) files from the whitened data, +-2s around the event.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make wav (sound) files from the whitened data, +-2s around the event.</span>
 
 <span class="n">deltat_sound</span> <span class="o">=</span> <span class="mf">2.</span>                     <span class="c1"># seconds around the event</span>
 
@@ -1326,7 +1340,7 @@ The LIGO Scientific Collaboration, the Virgo Collaboration, <a class="reference 
 <p>With good headphones, you may be able to hear a faint thump in the middle; that’s our signal!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Audio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Audio</span>
 
 <span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_template_whiten.wav&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
@@ -1337,7 +1351,7 @@ The LIGO Scientific Collaboration, the Virgo Collaboration, <a class="reference 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_H1_whitenbp.wav&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_H1_whitenbp.wav&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
 <span class="n">Audio</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
 </pre></div>
@@ -1352,7 +1366,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 <p>The code below will shift the data up by 400 Hz (by taking an FFT, shifting/rolling the frequency series, then inverse fft-ing). The resulting sound file will be noticibly more high-pitched, and the signal will be easier to hear.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># parameters for frequency shift</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># parameters for frequency shift</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="mi">4096</span>
 <span class="n">fshift</span> <span class="o">=</span> <span class="mf">400.</span>
 <span class="n">speedup</span> <span class="o">=</span> <span class="mf">1.</span>
@@ -1375,7 +1389,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">strain_H1_shifted</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">strain_H1_shifted</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1385,7 +1399,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 <h3>Listen to the frequency-shifted template and data<a class="headerlink" href="#listen-to-the-frequency-shifted-template-and-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_template_shifted.wav&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_template_shifted.wav&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
 <span class="n">Audio</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
 </pre></div>
@@ -1394,7 +1408,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_H1_shifted.wav&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fna</span> <span class="o">=</span> <span class="s1">&#39;audio/&#39;</span><span class="o">+</span><span class="n">eventname</span><span class="o">+</span><span class="s2">&quot;_H1_shifted.wav&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
 <span class="n">Audio</span><span class="p">(</span><span class="n">fna</span><span class="p">)</span>
 </pre></div>
@@ -1410,7 +1424,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 <p>We also unpack the DQ and HW injection bits to check what their values are.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">data_segments</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_segments</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">data_segments</span><span class="p">:</span>
     <span class="c1"># read in the data at 4096 Hz:</span>
     <span class="c1"># fn = &#39;L-L1_LOSC_4_V1-1126259446-32.hdf5&#39;</span>
@@ -1457,7 +1471,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span><span class="p">[</span><span class="n">segment_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span><span class="p">[</span><span class="n">segment_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1473,7 +1487,7 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
 <h2>Construct a csv file containing the whitened data and template<a class="headerlink" href="#construct-a-csv-file-containing-the-whitened-data-and-template" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># time vector around event</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># time vector around event</span>
 <span class="n">times</span> <span class="o">=</span> <span class="n">time</span><span class="o">-</span><span class="n">tevent</span>
 <span class="c1"># zoom in on [-0.2,0.05] seconds around event</span>
 <span class="n">irange</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">((</span><span class="n">times</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">times</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">))</span>
@@ -1506,22 +1520,29 @@ this is the “audio” equivalent of the enhanced visuals that NASA employs on 
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "ligo"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "ligo",
+            kernelName: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'ligo'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        </div>
+    </a>
 </div>
             
         </div>

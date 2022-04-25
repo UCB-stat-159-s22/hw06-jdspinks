@@ -38,15 +38,15 @@ from ligotools import readligo as rl
 # you might get a matplotlib warning here; you can ignore it.
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mImportError[0m                               Traceback (most recent call last)
-[0;32m<ipython-input-2-c10b90fd1270>[0m in [0;36m<module>[0;34m()[0m
-[1;32m      6[0m [0;32mimport[0m [0mh5py[0m[0;34m[0m[0m
-[1;32m      7[0m [0;32mimport[0m [0mjson[0m[0;34m[0m[0m
-[0;32m----> 8[0;31m [0;32mfrom[0m [0mligotools[0m[0;34m.[0m[0mutils[0m [0;32mimport[0m [0mwhiten[0m[0;34m,[0m [0mwrite_wavfile[0m[0;34m,[0m [0mreqshift[0m[0;34m,[0m [0mplot_NSD[0m[0;34m[0m[0m
-[0m[1;32m      9[0m [0;34m[0m[0m
-[1;32m     10[0m [0;31m# the IPython magic below must be commented out in the .py file, since it doesn't work there.[0m[0;34m[0m[0;34m[0m[0m
+[0;31m---------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m           Traceback (most recent call last)
+Input [0;32mIn [2][0m, in [0;36m<module>[0;34m[0m
+[1;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mh5py[39;00m
+[1;32m      7[0m [38;5;28;01mimport[39;00m [38;5;21;01mjson[39;00m
+[0;32m----> 8[0m [38;5;28;01mfrom[39;00m [38;5;21;01mligotools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m [38;5;28;01mimport[39;00m whiten, write_wavfile, reqshift, plot_NSD
+[1;32m     10[0m [38;5;66;03m# the IPython magic below must be commented out in the .py file, since it doesn't work there.[39;00m
+[1;32m     11[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mmatplotlib[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124minline[39m[38;5;124m'[39m)
 
-[0;31mImportError[0m: No module named ligotools.utils
-ImportError: No module named ligotools.utils
+[0;31mModuleNotFoundError[0m: No module named 'ligotools'
+ModuleNotFoundError: No module named 'ligotools'
 
